@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="myTable">
+      <tr>
+        <td>Food Name</td>
+        <td>Food Price</td>
+        <td>Food Image</td>
+        <td>Food Category</td>
+      </tr>
+      <tr>
+        <td><input type="text" name="FoodName" id="" /></td>
+        <td><input type="text" name="FoodPrice" id="" /></td>
+        <td><input type="file" name="FoodImage" id="" /></td>
+        <td>
+          <select name="FoodCategory" id="">
+            <option value="">A</option>
+            <option value="">B</option>
+            <option value="">C</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <script>
+      function myFunction() {
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        cell1.innerHTML = "<input type='text' name='FoodName' id='' />";
+        cell2.innerHTML = "<input type='text' name='FoodPrice' id='' />";
+        cell3.innerHTML = "<input type='file' name='FoodImage' id='' />";
+        cell4.innerHTML =
+          "<select name='FoodCategory' id=''><option value=''>A</option><option value=''>B</option><option value=''>C</option></select>";
+      }
+    </script>
+  </body>
+</html>

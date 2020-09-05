@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Traversing - Filtering</title>
+	<link rel="stylesheet" type="text/css" href="LoginPages.css">
+    <script src="jQuery.js"></script>
+    <script type="text/javascript">
+    	//The first() method returns the first element of the specified elements.
+    	function first(){
+    		$(document).ready(function(){
+    			$("div").first().css("background-color", "yellow");
+    			$("p").eq(1).css("background-color", "yellow");
+    			$("p").eq(2).css("background-color", "yellow");
+    		});
+    	}
+
+    	//The last() method returns the last element of the specified elements.
+    	function last(){
+    		$(document).ready(function(){
+    			$("div").last().css("background-color", "yellow");
+    			$("p").eq(5).css("background-color", "yellow");
+    			$("p").eq(6).css("background-color", "yellow");
+    		});
+    	}
+
+    	//The eq() method returns an element with a specific index number of the selected elements.start for 0, 1, 2, 3, 4.....
+    	function eq(){
+    		$(document).ready(function(){
+    			$("p").eq(5).css("background-color", "yellow");
+    		});
+    	}
+
+    	//The filter() method lets you specify a criteria. Elements that do not match the criteria are removed from the selection, and those that match will be returned.
+    	function filter(){
+    		$(document).ready(function(){
+    			$("p").filter(".intro").css("background-color", "yellow");
+    		});
+    	}
+    	//The not() method returns all elements that do not match the criteria. 
+    	function not(){
+    		$(document).ready(function(){
+    			$("p").not(".intro").css("background-color", "yellow");
+    		});
+    	}
+
+    	function clean(){
+    		$("p").filter(".intro").css("background-color", "white");
+    		$("p").not(".intro").css("background-color", "white");
+    		$("p").eq(5).css("background-color", "white");
+    		$("div").first().css("background-color", "white");
+    		$("div").last().css("background-color", "white");
+    	}
+    </script>
+</head>
+<body>
+	<h1>Welcome to My Homepage</h1>
+	<p>This is a paragraph.(index 0)</p>
+	<div style="border: 1px solid black;">
+	  <p class="intro">A paragraph in a div. And this is frist Div(index 1 and class = intro)</p>
+	  <p>Another paragraph in a div.(index 2)</p>
+	</div>
+	<br>
+	<div style="border: 1px solid black;">
+	  <p>A paragraph in another div.(index 3)</p>
+	  <p class="intro">Another paragraph in another div.(index 4 and class = intro)</p>
+	</div>
+	<br>
+	<div style="border: 1px solid black;">
+	  <p class="intro">A paragraph in another div. And this is last Div(index 5 and class = intro)</p>
+	  <p>Another paragraph in another div.(index 7)</p>
+	</div>
+	<br><br>
+	<button onclick="first()">First Div has be change background-color</button>
+	<hr>
+	<button onclick="last()">Last Div has be change backgrond-color</button>
+	<hr>
+	<button onclick="eq()">Index 0 "p" has be change the background-color</button>
+	<hr>
+	<button onclick="filter()">Change the "p" by the class == intro</button>
+	<hr>
+	<button onclick="not()">Change the "p" by the class != intro</button>
+	<hr>
+	<button onclick="clean()">Clean</button>
+</body>
+</html>

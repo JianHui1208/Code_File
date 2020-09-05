@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="" method="POST">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="" />
+      <br />
+      <section>
+        <label for="password">Password</label>
+        <button
+          id="toggle-password"
+          type="button"
+          aria-label="Show password as plain text. Warning: this will display your password on the screen."
+        >
+          Show password
+        </button>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+        />
+      </section>
+
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      const passwordInput = document.getElementById("password");
+      const togglePasswordButton = document.getElementById("toggle-password");
+
+      togglePasswordButton.addEventListener("click", togglePassword);
+
+      function togglePassword() {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          togglePasswordButton.textContent = "Hide password";
+          togglePasswordButton.setAttribute("aria-label", "Hide password.");
+        } else {
+          passwordInput.type = "password";
+          togglePasswordButton.textContent = "Show password";
+          togglePasswordButton.setAttribute(
+            "aria-label",
+            "Show password as plain text. " +
+              "Warning: this will display your password on the screen."
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

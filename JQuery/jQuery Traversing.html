@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="LoginPages.css">
+    <script src="jQuery.js"></script>
+    <script type="text/javascript">
+    	function parent(){
+	    	$(document).ready(function(){
+			  	$("span").parent().css({"color": "red", "border": "2px solid red"});
+			});
+		}
+
+		function parents(){
+			$(document).ready(function(){
+			  	$("span").parents().css({"color": "red", "border": "2px solid red"});
+			});
+		}
+
+		function parentsTDL(){
+			$(document).ready(function(){
+			  	$("span").parents("ul").css({"color": "red", "border": "2px solid red"});//designated location in the ()
+			});
+		}
+
+		function parentsUntil(){
+			$(document).ready(function(){
+			  	$("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+			});
+		}
+
+		function clean(){
+				$("span").parent().css({"border": "2px solid lightgrey", "color": "lightgrey"});
+				$("span").parents().css({"border": "2px solid lightgrey", "color": "lightgrey"});
+				$("span").parents("ul").css({"border": "2px solid lightgrey", "color": "lightgrey"});
+				$("span").parentsUntil("div").css({"border": "2px solid lightgrey", "color": "lightgrey"});
+		}
+
+    </script>
+</head>
+<body>
+		<button onclick="parents()" id="btn4">This is parents only</button>
+		<button onclick="parent()" id="btn1">This is parent</button>
+		<button onclick="parentsTDL()" id="btn2">This is parents but it is has the designated location</button>
+		<button onclick="parentsUntil()" id="btn3">This is parentUntil</button>
+		<button onclick="clean()" id="btn3">clean</button>
+	<div id="ancestors" style="display: block;">body(great-great-grandparent)
+	  <div style="width:500px;">div (great-grandparent)
+	    <ul>ul (grandparent)  
+	      <li>li (direct parent)
+	        <span>span</span>
+	      </li>
+	    </ul>   
+	  </div>
+
+	  <div style="width:500px;">div (grandparent)   
+	    <p>p (direct parent)
+	      <span>span</span>
+	    </p> 
+	  </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="LoginPages.css">
+    <script src="jQuery.js"></script>
+    <script type="text/javascript">
+    	//Get Content -text(), html(), val()
+    	$(document).ready(function(){
+    		$("#btn1").click(function(){
+    			alert("Text: " + $("#test1").text());
+    		});
+    	});
+
+    	$(document).ready(function(){
+    		$("#btn2").click(function(){
+    			alert("Text: " + $("#test1").html());
+    		});
+    	});
+
+    	$(document).ready(function(){
+    		$("#btn3").click(function(){
+    			alert("Value: " + $("#test2").val());
+    		});
+    	});
+
+    	//Get Attributes -attr()
+    	$(document).ready(function(){
+    		$("#btn4").click(function(){
+    			alert("Link Address: " + $("#youtube").attr("href"));
+    		});
+    	});
+
+    	//Set Content -text(), html(), val()
+    	$(document).ready(function(){
+    		$("#btn5").click(function(){
+    			$("#test3").text("This is .text() in jQuery.");
+    		});
+    	});
+
+    	$(document).ready(function(){
+    		$("#btn6").click(function(){
+    			$("#test4").html("<z>.html()</z>");
+    		});
+    	});
+
+    	$(document).ready(function(){
+    		$("#btn7").click(function(){
+    			$("#test5").val("Dolly Duck");
+    		});
+    	});
+
+    	//Set Attributes - attr()
+    	$(document).ready(function(){
+    		$("#btn8").click(function(){
+    			$("#test6").attr("href", "https://www.w3schools.com/jquery/");
+    		});
+    	});
+
+    	$(document).ready(function(){
+    		$("#btn9").click(function(){
+    			$("#test7").attr({
+    				"href" : "https://www.w3schools.com/jquery/",
+    				"title" : "W3Schools jQuery Tutorial"
+    			});
+    		});
+    	});
+
+    	//A callback Function for attr()
+    	$(document).ready(function(){
+		  	$("#btn10").click(function(){
+		    	$("#test8").attr("href", function(i, origValue){
+		      		return origValue + "/jquery/"; 
+		    	});
+		  	}); 
+		});
+
+    	//add some things inside the html(in the end)
+		$(document).ready(function(){
+		  $("#btn11").click(function(){
+		    $("#p1").append(" <b>Appended text</b>."),
+		    $("#p2").append(" <b>Appended text</b>.")
+		  });
+
+		  $("#btn12").click(function(){
+		    $("#ol1").append("<li><input type:'text'></li>");
+		  });
+		});
+
+		//add some things inside the html(in the start)
+		$(document).ready(function(){
+		  $("#btn13").click(function(){
+		    $("#p3").prepend(" <input type='checkbox'>. "),
+		    $("#p4").prepend(" <b>Prepended text</b>. ")
+		  });
+
+		  $("#btn14").click(function(){
+		    $("#ol2").prepend("<li>Prepended item</li>");
+		  });
+		});
+
+		//Javascript
+		//add the body start or end(no is end)
+		function appendText() {
+		  var txt1 = "<p>Text.</p>";        // Create text with HTML
+		  var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+		  var txt3 = document.createElement("p");
+		  txt3.innerHTML = "OPPO.";         // Create text with DOM
+		  $("body").append(txt1, txt2, txt3);   // Append new elements
+		}
+
+		$(document).ready(function(){
+			$("#btn15").click(function(){
+				$("#img1").before("<b>before</b>");
+			});
+
+			$("#btn16").click(function(){
+				$("#img1").after("<b>after</b>")
+			});
+		});
+
+		$(document).ready(function(){
+			$("#btn17").click(function(){
+				$("#div1").remove();
+			});
+		});
+
+		$(document).ready(function(){
+			$("#btn18").click(function(){
+				$("#div2").empty();
+			});
+		});
+
+		//only remove by class=test9
+		$(document).ready(function(){
+			$("#btn19").click(function(){
+				$("p").remove(".test9");
+			});
+		});
+
+		//can remove more than one class
+		$(document).ready(function(){
+			$("#btn20").click(function(){
+				$("p").remove(".test9, .demo");
+			});
+		});
+
+		//add Class to the element in two line or more
+		$(document).ready(function(){
+			$("#btn21").click(function(){
+				$("h1, h2, #p5").addClass("blue");
+				$("#div3").addClass("important");
+			});
+		});
+
+		//add class to the element in one line
+		$(document).ready(function(){
+			$("#btn22").click(function(){
+				$("#div4").addClass("important color");
+			});
+		});
+
+		//remove class form the element
+		$(document).ready(function(){
+			$("#btn23").click(function(){
+				$("h1, h2, p").removeClass("color");
+			});
+		});
+
+		//together using one class
+		$(document).ready(function(){
+			$("#btn24").click(function(){
+				$("h1, h2, p").toggleClass("color");
+			});
+		});
+
+		//return a CSS Property
+		$(document).ready(function(){
+			$("#btn25").click(function(){
+				alert("background-color = " + $("#p9").css("background-color") + "\n" + "background-color = " + $("#p8").css("background-color"));
+			});
+		});
+
+		//set the CSS this is best is JQuery for set the CSS
+		$(document).ready(function(){
+			$("#btn26").click(function(){
+				$("#p10").css({"background-color": "yellow", "font-family": "Times New Roman"});
+				$("#p11").css({"background-color": "black", "color": "white"});
+				$("#p12").css({"background-color": "red", "font-size": "20px"});
+				$("#p13").css({"background-color": "white"});
+			});
+		});
+
+		//get the div width and height
+		$(document).ready(function(){
+			$("#btn27").click(function(){
+				var txt = "";
+				txt += "Width of div: " + $("#div5").width() + "px" + "<br>";
+				txt += "Height of div: " + $("#div5").height() + "px";
+				$("#p14").html(txt);
+			});
+		});
+
+		$(document).ready(function(){
+			$("#btn28").click(function(){
+				var txt = "";
+				txt += "Documents Width/Height: " + $(document).width();
+				txt += "X" + $(document).height() + '\n';
+				txt += "Window width/height: " + $(window).width();
+				txt += "X" + $(window).height();
+				$("#p15").html(txt);
+			});
+		});
+	    </script>
+</head>
+<body>
+
+	<p id="test1">This is some <z>bold</z> text in a paragraph.</p>
+	<button id="btn1">Show Text</button>
+	<button id="btn2">Show HTML</button><br><br>
+
+	<p>Name: <input type="text" id="test2"></p>
+	<button id="btn3">Show The Value</button><br><br>
+
+	<p><a href="https://www.youtube.com" id="youtube">Youtube</a></p>
+	<button id="btn4">Show the href Value</button><br><br>
+
+	<p id="test3">This is My jQuery.</p>
+	<p id="test4">This is <z>.html()</z> in jQuery.</p>
+	<p>Input field: <input type="text" id="test5" value="Mickey Mouse"></p>
+	<button id="btn5">Set Text</button>
+	<button id="btn6">Set HTML</button>
+	<button id="btn7">Set Value</button><br><br>
+
+	<p><a href="https://www.w3schools.com" id="test6">W3Schools.com</a></p>
+	<button id="btn8">Change link adress Value</button>
+
+	<p><a href="https://www.w3schools.com" id="test7" title="W3Schools">W3Schools.com</a></p>
+	<button id="btn9">Change link adress Value and title</button>
+
+	<p><a href="https://www.w3schools.com" id="test8">W3Schools.com</a></p>
+	<button id="btn10">The link adress has be change use the return method</button>
+
+ 	<p id="p1">This is paragraph.</p>
+	<p id="p2">This is anotheor paragraph</p>
+	<ol id="ol1">
+	  <li><input type="text"></li>
+	  <li><input type="text"></li>
+	  <li><input type="text"></li>
+	</ol>
+	<button id="btn11">Append text</button>
+	<button id="btn12">Append input</button>
+
+	<p id="p3">This is a paragraph.</p>
+	<p id="p4">This is another paragraph.</p>
+
+	<ol id="ol2">
+	  <li>List item 1</li>
+	  <li>List item 2</li>
+	  <li>List item 3</li>
+	</ol>
+
+	<button id="btn13">Prepend text</button>
+	<button id="btn14">Prepend list item</button>
+
+	<p>This is a paragraph The Output at the under</p>
+	<button onclick="appendText()">Append Text</button><br><br><br>
+
+	<img src="\Users\William\Documents\PA!!!\Zero two\ZeroTwo.jpg" width="1080mm" height="1669mm" id="img1"><br><br>
+
+	<button id="btn15">Insert before</button>
+	<button id="btn16">Insert after</button><br><br>
+
+	<div id="div1" style="height:120px;width:300px;border:1px solid black;background-color:yellow;">This is some text in the div.
+	<p>This is a paragraph in the div.</p>
+	<p>This is another paragraph in the div.</p>
+	</div>
+	<p>Remove all above div element(the yellow)</p>
+	<button id="btn17">Remove</button><br><br>
+
+	<div id="div2" style="height:120px;width:300px;border:1px solid black;background-color:yellow;">This is some text in the div.
+	<p>This is a paragraph in the div.</p>
+	<p>This is another paragraph in the div.</p>
+	</div>
+	<p>clean the elements inside the div(The yellows)</p>
+	<button id="btn18">Clean</button><br><br>
+
+	<p>This is a paragraph.</p>
+	<p class="test9">This is another paragraph.</p>
+	<p class="test9">This is another paragraph.</p>
+	<button id="btn19">Remove all p elements with class test9</button><br><br>
+
+	<p>This is a paragraph.</p>
+	<p class="test9">This is another paragraph.</p>
+	<p class="test10">This is another paragraph.</p>
+	<p class="demo">This is another paragraph.</p>
+	<button id="btn20">Remove all p elements with class test9</button><br><br>
+
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<p id="p5">This is paragragh.</p>
+	<p id="p5">This is another paragragh.</p>
+	<div id="div3">This is some important text!</div>
+	<button id="btn21">Add Class to element</button><br><br>
+
+	<div id="div1">This is some text.</div>
+	<div id="div4">This is some text.</div><br>
+	<button id="btn22">Add classes to first div element</button>
+	<br><br>
+
+	<h1 class="color">Heading 1</h1>
+	<h2 class="color">Heading 2</h2>
+	<p class="color">This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+	<button id="btn23">Remove class from elements</button>
+
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<p>This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+	<button id="btn24">Toggle class</button>
+
+	<h2>This is a heading</h2>
+	<p style="background-color:#ff0000" id="p7">This is a paragraph.</p>
+	<p style="background-color:#00ff00" id="p8">This is a paragraph.</p>
+	<p style="background-color:#0000ff" id="p9">This is a paragraph.</p>
+	<button id="btn25">Return background-color of p</button>
+
+	<h2>This is a heading</h2>
+	<p style="background-color:#ff0000" id="p10">This is a paragraph.</p>
+	<p style="background-color:#00ff00" id="p11">This is a paragraph.</p>
+	<p style="background-color:#0000ff" id="p12">This is a paragraph.</p>
+	<p id="p13">This is a paragraph.</p>
+	<button id="btn26">Set background-color of p</button>
+
+	<div id="div5"></div>
+	<p id="p14"></p>
+	<button id="btn27">Display width and height for div</button>
+	<br>
+	<p>Output at the below</p>
+	<button id="btn28"> diplay dimensions of document and window</button>
+	<p id="p15"></p>
+</body>
+</html>

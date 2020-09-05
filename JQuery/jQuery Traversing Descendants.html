@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Traversing - Descendants</title>
+	<link rel="stylesheet" type="text/css" href="LoginPages.css">
+    <script src="jQuery.js"></script>
+    <script type="text/javascript">
+    	function children1(){
+    		$(document).ready(function(){
+    			$("div").children().css({"color": "red", "border": "2px solid red"});
+    		});
+    	}
+
+    	function childrenTDL(){
+    		$(document).ready(function(){
+  				$("div").children("p.first").css({"color": "red", "border": "2px solid red"});//designated location in the ()
+  			});
+    	}
+    	
+    	function find(){
+    		$(document).ready(function(){
+    			$("div").find("span").css({"color": "red", "border": "2px solid red"});
+    		});
+    	}
+
+    	function findAll(){
+    		$(document).ready(function(){
+    			$("div").find("*").css({"color": "red", "border": "2px solid red"});//if you want all location pull the ("*")
+    		});
+    	}
+
+    	function clean(){
+    		$("div").children().css({"border": "2px solid lightgrey", "color": "lightgrey"});
+    		$("div").children("p.first").css({"border": "2px solid lightgrey", "color": "lightgrey"});
+    		$("div").find("span").css({"border": "2px solid lightgrey", "color": "lightgrey"});
+    		$("div").find("*").css({"border": "2px solid lightgrey", "color": "lightgrey"});
+    	}
+    </script>
+</head>
+<body>
+	<button onclick="children1()">This is children function</button>
+	<button onclick="childrenTDL()">This is children function for the designated location</button>
+	<button onclick="find()">This is find function for the designted location</button>
+	<button onclick="findAll()">This is find all function,returns all descendants of the "div"</button>
+	<button onclick="clean()">clean</button>
+
+	<div id="ancestors" style="width: 500px; display: block;">
+		div(current element)
+		<p class="first">p(child)
+			<span>span (grandchild)</span>
+		</p>
+		<p class="second">p(child)
+			<span>span (grandchild)</span>
+		</p>
+	</div>
+</body>
+</html>

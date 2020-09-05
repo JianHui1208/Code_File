@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Traversing - Siblings</title>
+	<link rel="stylesheet" type="text/css" href="LoginPages.css">
+    <script src="jQuery.js"></script>
+    <script type="text/javascript">
+    	function siblings(){
+    		$(document).ready(function(){
+    			$("h2").siblings().css({"color": "red", "border": "2px solid red"});//No has h2 only
+    		});
+    	}
+
+    	function siblingsSpLocation(){
+    		$(document).ready(function(){
+    			$("h2").siblings("p").css({"color": "red", "border": "2px solid red"});
+    		});
+    	}
+
+    	function next(){//is below, no up
+    		$(document).ready(function(){
+    			$("h2").next().css({"color": "red", "border": "2px solid red"});
+    		});
+    	}
+
+    	function nextAll(){
+    		$(document).ready(function(){
+    			$("h2").nextAll().css({"color": "red", "border": "2px solid red"});
+    		});
+    	}
+
+    	function nextUntil(){
+    		$(document).ready(function(){
+    			$("h2").nextUntil("h6").css({"color": "red", "border": "2px solid red"});
+    		});
+    	}
+
+    	function clean(){
+    		$("h2").siblings().css({"border": "2px solid lightgrey", "color": "lightgrey"});
+    	}
+
+    	//still has prev(), prevAll() and prevUntil Method,
+    	//thier are same function,but prev start to the up.
+    </script>
+</head>
+<body class="siblings">
+	<div>
+		div(parent)
+		<p>p</p>
+		<span>span</span>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<h4>h4</h4>
+  		<h5>h5</h5>
+  		<h6>h6</h6>
+		<p>p</p>
+	</div>
+
+	<button onclick="siblings()">siblings</button>
+	<button onclick="siblingsSpLocation()">siblingsSpecialLocation</button>
+	<button onclick="next()">next(at the below, no up)</button>
+	<button onclick="nextAll()">Next to the below all</button>
+	<button onclick="nextUntil()">Next until to h6</button>
+	<button onclick="clean()">Clean</button>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<HTML>
+      <HEAD>
+        <TITLE>LoginPages</TITLE>
+        <link rel="stylesheet" type="text/css" href="LoginPages.css">
+        <script src="jQuery.js"></script>
+        <script type="text/javascript">
+          //Javascript
+          function CheckPassword(inputtxt) 
+          { 
+            var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+            var num1 = document.myform.number1.value;
+            var num2 = document.myform.number2.value;
+
+            if (inputtxt.value.match(passw)) {
+              alert(num1 +"   "+ num2)
+              document.getElementById('add').value = num1;
+              document.getElementById('add1').value = num2;
+            }else{
+              alert("Wrong!")
+            }
+          }
+          //JQuery
+          $(document).ready(function(){
+            $("#Animation").click(function(){
+              $("div").animate({
+                left: '250px',
+                opacity: '0.5',
+                height: '150px',
+                width: '150px'
+              });
+            });
+          });
+
+          $(document).ready(function(){
+            $("button").click(function(){
+              $("p.test").hide()
+            });
+          });
+          
+          // $(document).ready(function(){
+          //   $("#p2").mouseenter(function(){ //this is using id with the function
+          //     alert("You entered p1!");
+          //   });
+          // });
+
+          //hover() (two function by mouseenter() and mouseleave() they is connect)
+          // $(document).ready(function(){
+          //   $("#p2").hover(function(){
+          //     alert("You entered p1!");
+          //   },
+          //     function(){
+          //       alert("Bye!(id = p2)");
+          //     });
+          // });
+
+          $(document).ready(function(){
+            $("input").focus(function(){
+              $("#p1").css("background-color", "yellow");
+            });
+            $("input").blur(function(){
+              $("#p1").css("background-color", "white");
+            });//id cannot repeat / cannot has same id !!!
+          });
+
+          $(document).ready(function(){
+            $("#on").on({                 //id = on
+              mouseenter: function(){
+                $(this).css("background-color", "lightgray");
+              },  
+              mouseleave: function(){
+                $(this).css("background-color", "white");
+              }, 
+              click: function(){
+                $(this).css("background-color", "yellow");
+              }
+            });
+          });
+
+          $(document).ready(function(){
+            $("#hide").click(function(){
+              $("#p3").hide(1000);
+              //number is hide's speed big --> slow small --> fast
+            });
+            $("#show").click(function(){
+              $("#p3").show(1000);
+            });
+          });
+
+          $(document).ready(function(){
+            $("#b1").click(function(){
+              $("#h3").toggle(1000);
+            });
+          });
+
+          //fade in and fade out
+          $(document).ready(function(){
+            $("#b2").click(function(){
+              $("#div1").fadeIn();
+              $("#div2").fadeIn("slow");
+              $("#div3").fadeIn(1000);
+            });
+          });
+
+          $(document).ready(function(){
+            $("#b3").click(function(){
+              $("#div1").fadeOut();
+              $("#div2").fadeOut("slow");
+              $("#div3").fadeOut(1000);
+            });
+          });
+
+          $(document).ready(function(){
+            $("#b4").click(function(){
+              $("#div1").fadeToggle();
+              $("#div2").fadeToggle("slow");
+              $("#div3").fadeToggle(1000);
+            });
+          });
+
+          $(document).ready(function(){
+            $("#b5").click(function(){
+              $("#div4").fadeTo("slow", 0.15);
+              $("#div5").fadeTo("slow", 0.4);
+              $("#div6").fadeTo("slow", 0.7);
+            });
+          });
+
+          $(document).ready(function(){
+            $("#flip").click(function(){
+              $("#panel").slideDown("slow");
+            })
+          });
+
+          $(document).ready(function(){
+            $("#flipOne").click(function(){
+              $("#panelOne").slideUp("slow");
+            });
+          });
+
+          $(document).ready(function(){
+            $("#flipTwo").click(function(){
+              $("#panelTwo").slideToggle();
+            });
+          });
+
+
+          //animate
+          $(document).ready(function(){
+            $("#b6").click(function(){
+              $("#d3").animate({left: '250px'}); 
+            });
+          });
+
+          $(document).ready(function(){
+            $("#b7").click(function(){
+              $("#d4").animate({
+                left: '250px',
+                height: '+=150px',
+                width: '+=150px'
+              });
+            });
+          });
+
+          $(document).ready(function(){
+            $("#b8").click(function(){
+              $("#d5").animate({height: 'toggle'});
+            });
+          }); 
+
+          $(document).ready(function(){
+            $("#b9").click(function(){
+              $("#d6").animate({height: '300px',opacity: '0.4'}, "slow");
+              $("#d6").animate({width: '300px',opacity: '0.8'}, "slow");
+              $("#d6").animate({height: '100px',opacity: '0.4'}, "slow");
+              $("#d6").animate({width: '100px',opacity: '0.8'}, "slow");
+            });
+          });
+
+          $(document).ready(function(){
+            $("#b10").click(function(){
+              var div = $("#d7");
+              div.animate({left: '100px'},"slow");
+              div.animate({fontSize: '3em'},"slow");
+              div.animate({fontSize: '1em'},"slow");
+              div.animate({width: '100px'},"slow");
+            });
+          });
+
+          $(document).ready(function(){
+            $("#b11").click(function(){
+              var div = $("#d8");
+              div.animate({height: '100px'},"slow");
+              div.animate({width: '100px'},"slow");
+              div.animate({height: '100px'},"slow");
+              div.animate({width: '100px'},"slow");
+              div.animate({height: '200px'},"slow");
+              div.animate({width: '200px'},"slow");
+            });
+          });
+
+          $(document).ready(function(){
+            $("#flipThree").click(function(){
+              $("#panelThree").slideToggle(5000);
+            });
+            $("#stop").click(function(){
+              $("#panelThree").stop();
+            });
+          });
+
+        $(document).ready(function(){
+            $("#b12").click(function(){
+              $("#d9").animate({height: '1000px'},5000);
+              $("#d9").animate({width: '1000px'},5000);
+            });
+            $("#stop1").click(function(){
+              $("#d9").stop(true,false);
+            });
+          });         
+
+        //working by step by step
+        $(document).ready(function(){
+          $("#b13").click(function(){
+            $("#p4").hide("slow", function(){
+              alert("The paragraph is now hidden");
+            });
+          });
+        });
+        //working by no step by step(this can running but has logical error)
+        $(document).ready(function(){
+          $("#b13").click(function(){
+            $("#p4").hide(1000);
+            alert("The paragraph is now hidden");
+          });
+        });
+
+        $(document).ready(function(){
+          $("#b14").click(function(){
+            $("#p5").css("color", "red")
+              .slideUp(2000)
+              .slideDown(2000);
+          });
+        });
+
+        </script>
+
+      </HEAD>
+
+      <BODY>
+        <FORM NAME="myform">
+          <p id = p2>Name: </p><INPUT TYPE="text" NAME="number1" id="p1"><br>
+          <p>Password: </p><INPUT TYPE="Password" NAME="number2" id="p1"><br><br>
+          <INPUT TYPE="button" NAME="button" Value="Submit" onClick="CheckPassword(number2)"><br><br>
+          <input id="add" name="result"><br><br>
+          <input id="add1" name="result">
+        </FORM>
+
+        <button id="Animation">Start Animation</button>
+        <br><br>
+        <div style="background: #000000; height: 100px; width: 100px; position: absolute;"></div>
+
+        <br><br><br><br><br><br>
+        <h2 id="on">This is "on" function in jQuery.</h2>
+
+        <br><br>
+        <h2 id="p3">hide and show</h2>
+        <button id="hide">hide</button>
+        <button id="show">show</button><br>
+
+        <table id="h3"><tr><td><input type="checkbox" name="" value="okoko">plplpl</td></tr></table>
+        <button id="b1">button</button><br><br>
+
+        <button id="b2">Click There has fade in (It is frist)</button><br><br>
+        <div id="div1" style="width: 80px; height: 80px; display: none;background-color:red;"></div><br>
+        <div id="div2" style="width: 80px; height: 80px; display: none;background-color:green;"></div><br>
+        <div id="div3" style="width: 80px; height: 80px; display: none;background-color:blue;"></div><br>
+        <button id="b3">Click There has fade out (and this is second)</button><br><br>
+        <button id="b4">Click There has fade out and fade in in one click</button><br><br>
+
+
+        <button id="b5">Click There has fadeTo() </button><br><br>
+        <div id="div4" style="width:80px;height:80px;background-color:red;"></div><br>
+        <div id="div5" style="width:80px;height:80px;background-color:green;"></div><br>
+        <div id="div6" style="width:80px;height:80px;background-color:blue;"></div><br><br>
+
+        <div id="flip">Click to slide down panel</div>
+        <div id="panel">Hello world!</div>
+        <br><br><br>
+        <div id="flipOne">Click to slide up panel</div>
+        <div id="panelOne">Hello world!</div>
+        <br><br><br>
+        <div id="flipTwo">Click to slide down panel and Click second to slide up panel</div>
+        <div id="panelTwo">Hello world!</div><br><br>
+
+        <a>Animate</a><br><br>
+        <button id="b6">Start</button><br><br>
+        <div style="background:#98bf21;height:100px;width:100px;position:absolute;" id="d3"></div><br><br><br><br><br><br>
+
+        <button id="b7">Start</button><br><br>
+        <div style="background:#98bf21;height:100px;width:100px;position:absolute;" id="d4"></div><br><br><br><br><br><br>
+
+        <button id="b8">Start</button><br><br>
+        <div style="background:#98bf21;height:100px;width:100px;position:absolute;" id="d5"></div><br><br><br><br><br><br>
+
+        <button id="b9">Start</button><br><br>
+        <div style="background:#98bf21;height:100px;width:100px;position:absolute;" id="d6"></div><br><br><br><br><br><br>
+
+        <button id="b10">Start</button><br><br>
+        <div style="background: #98bf21; height: 100px; width: 200px; position: absolute;" id="d7">Hello</div><br><br><br><br><br><br>
+
+        <button id="stop">Stop sliding</button>
+        <div id="flipThree">Click to slide down panel</div>
+        <div id="panelThree">Hello world!</div><br><br>
+
+        <button id="b12">Start</button><br><br><button id="stop1">Stop</button><br><br>
+        <div style="background: #98bf21; height: 100px; width: 200px; position: absolute;" id="d9"></div><br><br><br><br><br><br>
+
+        <button id="b11">Start</button><br><br>
+        <div style="background: #98bf21; height: 200px; width: 200px; position: absolute;" id="d8"></div><br><br><br><br><br><br><br><br><br><br><br>
+
+        <button id="b13">hide</button>
+        <p id="p4">This paragraph will be hide</p><br><br><br>
+
+        <p id="p5">jQuery is fun!!</p>
+        <button id="b14">Click me</button><br><br><br>
+
+      </BODY>
+</HTML>
+
+<!--           //$(this).hide() (hide the current things)
+          //$("p").hide() (hide the <p> things)
+          //$(".test").hide() (hide the things for class = test)
+          //$("#test").hide() (hide the things for id = test)
+
+          //Mouse          Keyboard     FORM        Document/Window
+          //1. click       1. keypress  1. submit   1. load
+          //2. dbclick     2. keydown   2. change   2. resize
+          //3. mouseenter  3. keyup     3. focus    3. scroll
+          //4. mouseleave               4. blur     4. unload
+
+          //fadeIn()
+          //fadeOut()
+          //fadeToggle()
+          //fadeTo() -->
