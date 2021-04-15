@@ -1,0 +1,301 @@
+.monthNoCol {
+    width: 3.2%
+}
+
+.monthTxtCol {
+    width: 10.9%;
+}
+
+.pnmlink {
+    color: #CDCDCD;
+    font-size: 0.8em;
+}
+
+#Calendar {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    width: 700px;
+    margin-left: 350px;
+}
+
+#Calendar h1 {
+    font-size: 12.0pt;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 0.1em;
+    font-weight: normal;
+}
+
+.Saprorar {
+    display: inline-block;
+    width: 0.1em;
+    height: 0;
+    border-style: solid;
+    border-width: 3.7px 0 3.7px 7.8px;
+    border-color: transparent transparent transparent #f3f6fd;
+    margin: 0 0.15em;
+}
+
+.Saprolar {
+    display: inline-block;
+    width: 0.1em;
+    height: 0;
+    border-style: solid;
+    border-width: 3.7px 7.8px 3.7px 0;
+    border-color: transparent #f3f6fd transparent transparent;
+    margin: 0 0.15em;
+}
+
+#Calendar tr {
+    height: 1.2em;
+}
+
+#Calendar tr:nth-child(even) {
+    vertical-align: top;
+    height: 1.5em;
+}
+
+#Calendar tr:nth-child(odd) {
+    vertical-align: middle;
+}
+
+#Calendar tr:first-child {
+    height: 1.7em;
+    vertical-align: bottom;
+}
+
+#Calendar tr:nth-child(2) {
+    vertical-align: bottom;
+    height: 1.2em;
+}
+
+#Calendar tr:first-child td:first-child {
+    -moz-border-radius-topleft: 11px;
+    -webkit-border-top-left-radius: 11px;
+    border-top-left-radius: 11px;
+}
+
+#Calendar tr:first-child td:last-child {
+    -moz-border-radius-topright: 11px;
+    -webkit-border-top-right-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+#Calendar tr:not(:first-child) td:last-child {
+    border-right: 1.5pt solid #355986;
+}
+
+.Sapro894881 {
+    color: gray;
+    font-size: 11.0pt;
+    font-weight: 700;
+    text-align: center;
+    border-top: .5pt solid #1F4E78;
+    border-left: 1.5pt solid #1F4E78;
+    background: #D9D9D9;
+}
+
+.Sapro904881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-top: .5pt solid #1F4E78;
+    background: #D9D9D9;
+}
+
+.Sapro914881 {
+    color: gray;
+    font-size: 11.0pt;
+    font-weight: 700;
+    text-align: center;
+    border-top: .5pt solid #1F4E78;
+    border-left: .5pt solid #1F4E78;
+    background: #D9D9D9;
+}
+
+.Sapro924881 {
+    color: navy;
+    font-size: 11.0pt;
+    font-weight: 700;
+    text-align: center;
+    border-top: .5pt solid #1F4E78;
+    border-left: .5pt solid #1F4E78;
+}
+
+.Sapro934881 {
+    color: maroon;
+    font-size: 0.8em;
+    text-align: left;
+    border-top: .5pt solid #1F4E78;
+}
+
+.Sapro944881 {
+    color: navy;
+    font-size: 11.0pt;
+    font-weight: 700;
+    text-align: center;
+    border-top: .5pt solid #1F4E78;
+    border-left: .5pt solid #1F4E78;
+    background: #F9F9E1;
+}
+
+.Sapro954881 {
+    color: maroon;
+    font-size: 0.8em;
+    text-align: left;
+    border-top: .5pt solid #1F4E78;
+    border-right: 1.5pt solid #355986;
+    background: #F9F9E1;
+}
+
+.Sapro964881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-left: 1.5pt solid #1F4E78;
+    background: #D9D9D9;
+}
+
+.Sapro984881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-left: .5pt solid #1F4E78;
+    background: #D9D9D9;
+}
+
+.Sapro994881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-left: .5pt solid #1F4E78;
+}
+
+.Sapro1014881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-left: .5pt solid #1F4E78;
+    background: #F9F9E1;
+}
+
+.Sapro1034881 {
+    color: navy;
+    font-size: 11.0pt;
+    font-weight: 700;
+    text-align: center;
+    border-top: .5pt solid #1F4E78;
+    border-left: 1.5pt solid #1F4E78;
+    background: #F9F9E1;
+}
+
+.Sapro1044881 {
+    color: maroon;
+    font-size: 0.8em;
+    text-align: left;
+    border-top: .5pt solid #1F4E78;
+    background: #F9F9E1;
+}
+
+.Sapro1054881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-left: 1.5pt solid #1F4E78;
+    background: #F9F9E1;
+}
+
+.Sapro1074881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-top: .5pt solid #1F4E78;
+    border-left: .5pt solid #1F4E78;
+    background: #D9D9D9;
+}
+
+.Sapro1084881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-top: .5pt solid #1F4E78;
+    border-right: 1.5pt solid #355986;
+    background: #D9D9D9;
+}
+
+.Sapro1094881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-bottom: 1.5pt solid #1F4E78;
+    border-left: 1.5pt solid #1F4E78;
+    background: #F9F9E1;
+}
+
+.Sapro1114881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-bottom: 1.5pt solid #1F4E78;
+    border-left: .5pt solid #1F4E78;
+}
+
+.Sapro1134881 {
+    font-size: 0.8em;
+    text-align: left;
+    border-bottom: 1.5pt solid #1F4E78;
+    border-left: .5pt solid #1F4E78;
+    background: #D9D9D9;
+}
+
+.Sapro1154881 {
+    font-size: 12.0pt;
+}
+
+.Sapro1164881 {
+    color: white;
+    font-size: 10.0pt;
+    text-align: center;
+    border-top: 1.0pt solid white;
+    border-right: 1.0pt solid white;
+    border-left: 1.5pt solid #1F4E78;
+    background: #1F4E78;
+}
+
+.Sapro1174881 {
+    color: white;
+    font-size: 10.0pt;
+    text-align: center;
+    border-top: 1.0pt solid white;
+    border-right: 1.0pt solid white;
+    border-left: 1.0pt solid white;
+    background: #1F4E78;
+}
+
+.Sapro1204881 {
+    color: white;
+    font-size: 12.0pt;
+    text-align: center;
+    border-bottom: 1.0pt solid white;
+    background: #1F4E78;
+}
+
+.Sapro1214881 {
+    color: #CDCDCD;
+    font-size: 0.8em;
+    text-align: right;
+    border-bottom: 1.0pt solid white;
+    background: #1F4E78;
+}
+
+.Sapro1234881 {
+    color: #CDCDCD;
+    font-size: 0.8em;
+    text-align: left;
+    border-bottom: 1.0pt solid white;
+    background: #1F4E78;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
